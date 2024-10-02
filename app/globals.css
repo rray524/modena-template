@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fixed-header {
+  @apply fixed top-0 w-full z-50 transition-transform duration-300;
+}
+
+.hidden-header {
+  @apply -translate-y-full;
+}
+
+.scrollable-container {
+  scrollbar-width: thin;
+  scrollbar-color: #16a34a #edf2f7;
+}
+.scrollable-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-container::-webkit-scrollbar-track {
+  background: #edf2f7;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+  background-color: #16a34a;
+  border-radius: 10px;
+  border: 2px solid #edf2f7;
+}
+html,
+body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+.banner-bg {
+  @apply bg-[url('../public/images/banner.jpg')] bg-slate-900 bg-no-repeat bg-center bg-cover;
+}
+.skeleton {
+  @apply animate-pulse bg-gray-300 dark:bg-gray-700;
+}
+html {
+  scroll-behavior: smooth;
+}
